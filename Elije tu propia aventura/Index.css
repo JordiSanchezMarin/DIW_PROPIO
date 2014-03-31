@@ -1,0 +1,63 @@
+#videoAbs
+{
+	position: absolute;
+	width:1200px;
+	height: 720px;
+	z-index:3;
+	margin-left: 45px;
+}
+#video
+{
+	width: 1000px;
+	height: 720px;
+	margin-top: -25px;
+}
+
+#izq
+{
+	height: 100%;
+	width:400px;
+	float:left;
+	z-index:2;
+}
+#der
+{
+	height: 100%;
+	width:400px;
+	float:left;
+	z-index:2;
+}
+#cent
+{
+	height: 100%;
+	width:400px;
+	float:left;
+	z-index: -10;
+	padding-top:10%;
+}
+#cont
+{
+	width:1200px;
+	height: 720px;
+}
+#div_pregunta{
+	margin-top:40%;
+	background-color: white;
+	opacity: 0.9;
+	font-family: Verdana;
+	font-size: 20px;
+	text-align: center;
+	padding:10px;
+}
+img
+{
+	width:0;
+	height: 0;
+	position: relative;
+	top: 25%;
+	transform: translateY(-50%);
+}
+button{
+	margin-top:50%;
+	margin-left:40%;
+}
