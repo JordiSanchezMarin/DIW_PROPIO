@@ -49,16 +49,18 @@ function comprobarTiempo(tiempo){
 };
 
 function mostrarPregunta(){
-	$("#der").html("<button id='" + escenaNow.pregunta.respuestas[0].id_escena + "'>"+ escenaNow.pregunta.respuestas[0].enunciado+"</button>");
-	$("#izq").html("<button id='" + escenaNow.pregunta.respuestas[1].id_escena + "'>"+ escenaNow.pregunta.respuestas[1].enunciado+"</button>");
+	$("#der").html("<img id='" + escenaNow.pregunta.respuestas[0].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[0].id_escena)).imagen + "' width='300px' height='200px'/> <br />" + escenaNow.pregunta.respuestas[0].enunciado);
+	$("#izq").html("<img id='" + escenaNow.pregunta.respuestas[1].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[1].id_escena)).imagen + "' width='300px' height='200px'/> <br />" + escenaNow.pregunta.respuestas[1].enunciado);
 	$("#cent").html("<div id='div_pregunta'>"+escenaNow.pregunta.pregunta+"</div>");
+	$("img").addClass("img_grande");
 };
 function respuesta_Click(){
-	$("button").click(function(){
+	$("img").click(function(){
 		id = $(this).attr("id");
 		escenaActual = id;
 		escenaNow = encontrarEscena(parseInt(escenaActual));
 		animateGrande();
+		$("#cont>div").empty();
 		video.currentTime = escenaNow.inicio;
 		rePlay();
 	});
