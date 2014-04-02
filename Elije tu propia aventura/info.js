@@ -1,4 +1,4 @@
-var escenaActual = 1;
+﻿var escenaActual = 1;
 var escenaNow = null;
 var info = {
     "tiempo": 30,
@@ -24,7 +24,7 @@ var info = {
         },
         {
             "id": 2,
-            "imagen": "Imagenes/2.png",
+            "imagen": "Imagenes/dia_trabajo.png",
             "inicio": 50.20,
             "fin": 53.00,
             "pregunta": {
@@ -43,7 +43,7 @@ var info = {
         },
         {
             "id": 3,
-            "imagen": "Imagenes/2.png",
+            "imagen": "Imagenes/ir_oficina.png",
             "inicio": 53.22,
             "fin": 59.8,
             "pregunta": {
@@ -62,7 +62,7 @@ var info = {
         },
         {
             "id": 4,
-            "imagen": "Imagenes/3.png",
+            "imagen": "Imagenes/trabajar_seriamente.png",
             "inicio": 60.19,
             "fin": 71.6,
             "pregunta": {
@@ -81,7 +81,7 @@ var info = {
         },
         {
             "id": 5,
-            "imagen": "Imagenes/4.png",
+            "imagen": "Imagenes/ir_coche.png",
             "inicio": 72.31,
             "fin": 84.22,
             "pregunta": {
@@ -96,7 +96,7 @@ var info = {
         },
         {
             "id": 6,
-            "imagen": "Imagenes/5.png",
+            "imagen": "Imagenes/ir_andando.png",
             "inicio": 85.29,
             "fin": 92.0,
             "pregunta": {
@@ -115,7 +115,7 @@ var info = {
         },
         {
             "id": 7,
-            "imagen": "Imagenes/7.png",
+            "imagen": "Imagenes/duelo_jedi.png",
             "inicio": 92.8,
             "fin": 99.3,
             "pregunta": {
@@ -130,7 +130,7 @@ var info = {
         },
         {
             "id": 8,
-            "imagen": "Imagenes/8.png",
+            "imagen": "Imagenes/enamorar_nigga.png",
             "inicio": 100.9,
             "fin": 116.2,
             "pregunta": {
@@ -145,7 +145,7 @@ var info = {
         },
         {
             "id": 9,
-            "imagen": "Imagenes/9.png",
+            "imagen": "Imagenes/dimitir.png",
             "inicio": 117.5,
             "fin": 134.6,
             "pregunta": {
@@ -164,7 +164,7 @@ var info = {
         },
         {
             "id": 10,
-            "imagen": "Imagenes/10.png",
+            "imagen": "Imagenes/ahogar_penas.png",
             "inicio": 137.0,
             "fin": 156.2,
             "pregunta": {
@@ -179,7 +179,7 @@ var info = {
         },
         {
             "id": 11,
-            "imagen": "Imagenes/11.png",
+            "imagen": "Imagenes/encarar_jefe.png",
             "inicio": 157.7,
             "fin": 165.2,
             "pregunta": {
@@ -194,7 +194,7 @@ var info = {
         },
         {
             "id": 12,
-            "imagen": "Imagenes/12.png",
+            "imagen": "Imagenes/ir_bar.png",
             "inicio": 166.3,
             "fin": 176.5,
             "pregunta": {
@@ -213,7 +213,7 @@ var info = {
         },
         {
             "id": 13,
-            "imagen": "Imagenes/13.png",
+            "imagen": "Imagenes/volver_curro.png",
             "inicio": 178.0,
             "fin": 211.9,
             "pregunta": {
@@ -228,7 +228,7 @@ var info = {
         },
         {
             "id": 14,
-            "imagen": "Imagenes/14.png",
+            "imagen": "Imagenes/quedarse_novia.png",
             "inicio": 212.8,
             "fin": 221.5,
             "pregunta": {
@@ -247,7 +247,7 @@ var info = {
         },
         {
             "id": 15,
-            "imagen": "Imagenes/16.png",
+            "imagen": "Imagenes/pinchito_casa.png",
             "inicio": 222.0,
             "fin": 238.2,
             "pregunta": {
@@ -262,7 +262,7 @@ var info = {
         },
         {
             "id": 18,
-            "imagen": "Imagenes/17.png",
+            "imagen": "Imagenes/dia_festivo.png",
             "inicio": 239.0,
             "fin": 247.5,
             "pregunta": {
@@ -281,7 +281,7 @@ var info = {
         },
         {
             "id": 17,
-            "imagen": "Imagenes/18.png",
+            "imagen": "Imagenes/quedar_amigo.png",
             "inicio": 273.0,
             "fin": 284.8,
             "pregunta": {
@@ -300,7 +300,7 @@ var info = {
         },
         {
             "id": 16,
-            "imagen": "Imagenes/19.png",
+            "imagen": "Imagenes/cena_romantica.png",
             "inicio": 258.5,
             "fin": 270.6,
             "pregunta": {
@@ -315,7 +315,7 @@ var info = {
         },
         {
             "id": 19,
-            "imagen": "Imagenes/20.png",
+            "imagen": "Imagenes/quedar_novia.png",
             "inicio":248.9,
             "fin": 256.3,
             "pregunta": {
@@ -334,7 +334,7 @@ var info = {
         },
         {
             "id": 20,
-            "imagen": "Imagenes/21.png",
+            "imagen": "Imagenes/ir_playa.png",
             "inicio": 288.1,
             "fin": 308.8,
             "pregunta": {
@@ -349,7 +349,7 @@ var info = {
         },
         {
             "id": 21,
-            "imagen": "Imagenes/22.png",
+            "imagen": "Imagenes/ir_basket.png",
             "inicio": 309.2,
             "fin": 325.3,
             "pregunta": {
