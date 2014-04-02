@@ -1,5 +1,4 @@
-
-
+﻿
 //Funcion para hacer el video pequeño y que salgan las imagenes
 function animatePequeño()
 {
@@ -49,8 +48,8 @@ function comprobarTiempo(tiempo){
 };
 
 function mostrarPregunta(){
-	$("#der").html("<img id='" + escenaNow.pregunta.respuestas[0].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[0].id_escena)).imagen + "' width='300px' height='200px'/> <br />" + escenaNow.pregunta.respuestas[0].enunciado);
-	$("#izq").html("<img id='" + escenaNow.pregunta.respuestas[1].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[1].id_escena)).imagen + "' width='300px' height='200px'/> <br />" + escenaNow.pregunta.respuestas[1].enunciado);
+	$("#der").html("<img id='" + escenaNow.pregunta.respuestas[0].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[0].id_escena)).imagen + "' width='300px' height='200px'/> <br /><label>" + escenaNow.pregunta.respuestas[0].enunciado + "</label>");
+	$("#izq").html("<img id='" + escenaNow.pregunta.respuestas[1].id_escena + "' src='" +  encontrarEscena(parseInt(escenaNow.pregunta.respuestas[1].id_escena)).imagen + "' width='300px' height='200px'/> <br /><label>" + escenaNow.pregunta.respuestas[1].enunciado + "</label>");
 	$("#cent").html("<div id='div_pregunta'>"+escenaNow.pregunta.pregunta+"</div>");
 	$("img").addClass("img_grande");
 };
@@ -82,33 +81,32 @@ function encontrarEscena(id){
 	} 
 	return escenaR;
 };
-jQuery(document).ready(function($) {
-	escenaNow= encontrarEscena(escenaActual);
-	var video = document.getElementById("video");
-	//video.play();
-	video.addEventListener("timeupdate", function () {
-		var tiempo = video.currentTime;
-		if(comprobarTiempo(tiempo) == true && escenaNow.pregunta.pregunta != null ){
-			video.pause();
-			animatePequeño();
-			mostrarPregunta();
-			respuesta_Click();
-		}
-		else if (comprobarTiempo(tiempo) == true && escenaNow.pregunta.respuestas[0].id_escena != null){
-			escenaNow = encontrarEscena(parseInt(escenaNow.pregunta.respuestas[0].id_escena));
-			video.currentTime = escenaNow.inicio;
-		}
-		else if(escenaNow.pregunta.respuestas[0].id_escena == null && comprobarTiempo(tiempo) == true){
-			video.currentTime = 0;
-			video.pause();
-			escenaNow = null;
-			escenaActual = 1;
-			escenaNow= encontrarEscena(escenaActual);
-		}
-			
-			/*setTimeout(function(){
-				animateGrande();
-			},2000);*/
-		
-	}, false);
+jQuery(document).ready(function ($) {
+    escenaNow = encontrarEscena(escenaActual);
+    var video = document.getElementById("video");
+    video.addEventListener("timeupdate", function () {
+        var tiempo = video.currentTime;
+        if (comprobarTiempo(tiempo) == true && escenaNow.pregunta.pregunta != null) {
+            video.pause();
+            animatePequeño();
+            mostrarPregunta();
+            respuesta_Click();
+        }
+        else if (comprobarTiempo(tiempo) == true && escenaNow.pregunta.respuestas[0].id_escena != null) {
+            escenaNow = encontrarEscena(parseInt(escenaNow.pregunta.respuestas[0].id_escena));
+            video.currentTime = escenaNow.inicio;
+        }
+        else if (escenaNow.pregunta.respuestas[0].id_escena == null && comprobarTiempo(tiempo) == true) {
+            video.currentTime = 0;
+            video.pause();
+            escenaNow = null;
+            escenaActual = 1;
+            escenaNow = encontrarEscena(escenaActual);
+        }
+
+        /*setTimeout(function(){
+        animateGrande();
+        },2000);*/
+
+    }, false);
 });
