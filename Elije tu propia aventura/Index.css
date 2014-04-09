@@ -1,15 +1,31 @@
+#btn_play{
+	width: 300px;
+	height: 100px;
+	background-color: #4CC747;
+	color:#000000;
+	margin:10px;
+	border-radius: 25px;
+	border: none;
+	font-weight: bold;
+	font-size: 50px;
+	font-family: Verdana;
+	margin-left: 430px;
+}
+#btn_play:hover{
+	background-color: #288E25;
+}
 #videoAbs
 {
 	position: absolute;
 	width:1200px;
-	height: 720px;
+	height: 620px;
 	z-index:3;
 	margin:0px;
 }
 #video
 {
-	width: 1000px;
-	height: 720px;
+	width: 800px;
+	height: 520px;
 	margin-top: -25px;
 }
 
@@ -44,7 +60,7 @@
 #cont
 {
 	width:1350px;
-	height: 730px;
+	height: 668px;
 	background-color: black;
 	opacity:0.95;
 	margin:0px;

@@ -81,9 +81,26 @@ function encontrarEscena(id){
 	} 
 	return escenaR;
 };
+function btn_play(){
+	$("#btn_play").click(function(){
+		$("#video").get(0).play();
+		$(this).unbind("click");
+		btn_pause();
+		$(this).html("<span class='glyphicon glyphicon-pause'></span>");
+	});
+};
+function btn_pause(){
+	$("#btn_play").click(function(){
+		$("#video").get(0).pause();
+		$(this).unbind("click");
+		btn_play();
+		$(this).html("<span class='glyphicon glyphicon-play'></span>");
+	});
+};
 jQuery(document).ready(function ($) {
+	btn_play();
     escenaNow = encontrarEscena(escenaActual);
-    var video = document.getElementById("video");
+    var video = $("#video").get(0);
     video.addEventListener("timeupdate", function () {
         var tiempo = video.currentTime;
         if (comprobarTiempo(tiempo) == true && escenaNow.pregunta.pregunta != null) {
@@ -103,10 +120,5 @@ jQuery(document).ready(function ($) {
             escenaActual = 1;
             escenaNow = encontrarEscena(escenaActual);
         }
-
-        /*setTimeout(function(){
-        animateGrande();
-        },2000);*/
-
     }, false);
 });
